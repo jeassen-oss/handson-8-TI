@@ -21,7 +21,6 @@ public class Motor extends Kendaraan {
         // TODO: Implementasi dengan memanggil super dan menambahkan info Motor
         super.displayInfo();
         System.out.println("Jenis Motor: " + jenisMotor);
-        System.out.println("Rem Cakram: " + (hadRemCakram ? "Ya" : "Tidak"));
     }
 
     @Override

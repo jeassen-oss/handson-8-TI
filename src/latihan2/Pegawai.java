@@ -15,7 +15,11 @@ public class Pegawai {
         System.out.println("Pegawai constructor called");
     }
 
-    public Pegawai(Dosen other, boolean b) {
+    // ✅ FIX: Constructor khusus untuk cloning (tidak mencetak output)
+    protected Pegawai(Pegawai other, boolean isClone) {
+        this.nip = other.nip;
+        this.nama = other.nama;
+        this.jurusan = other.jurusan;
     }
 
     // Method untuk di-override
@@ -28,9 +32,10 @@ public class Pegawai {
     }
 
     // Method clone dengan return type Pegawai
+    @Override
     public Pegawai clone() {
         // TODO: Return new Pegawai dengan data yang sama
-        return new Pegawai(nip, nama, jurusan);
+        return new Pegawai(this, true);
     }
 
     // Protected method untuk ditest widening

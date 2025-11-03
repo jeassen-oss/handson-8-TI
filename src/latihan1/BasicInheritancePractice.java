@@ -34,6 +34,9 @@ public class BasicInheritancePractice {
         // Bahan Bakar: Bensin
         // AC menyala
 
+        // ===== HIERARKI KENDARAAN MOTOR =====
+        System.out.println("\n=== Latihan 2: HIERARKI KENDARAAN MOTOR ===");
+
         // Latihan 2: Membuat hierarki kendaraan Motor
         // - Buat object dari class Motor dengan parameter:
         //   merk: "Honda", warna: "Merah", tahun: 2023, jenisMotor: "Sport"
@@ -80,14 +83,14 @@ public class BasicInheritancePractice {
         // Kapasitas Muatan: 5.0 ton
         // Jumlah Roda: 6
 
+        // ===== METHOD PARENT DENGAN SUPER =====
+        System.out.println("\n=== Latihan 4: METHOD PARENT DENGAN SUPER ===");
+
         // Latihan 4: Mengakses method parent dengan super
         // - Panggil method klakson() dari object Truk
-        truk = new Truk("Mitsubishi", "Putih", 2021, 5.0, 6);
-
         // - Method klakson() di Truk harus memanggil super.klakson() terlebih dahulu
-        truk.klakson();
-
         // - Kemudian tambahkan suara klakson truk yang lebih keras
+        truk.klakson();
 
         // Ekspektasi Output:
         // Tin tin!
@@ -101,7 +104,7 @@ public class BasicInheritancePractice {
         //   merk: "Ferrari", warna: "Merah", tahun: 2024, jumlahPintu: 2,
         //   jenisBahanBakar: "Bensin", turbo: true, kecepatanMaksimal: 320
         MobilSport mobilSport = new MobilSport("Ferrari", "Merah", 2024,
-                2, "Bensin", true, 320);
+                2, "Bensin", "FRR2024001", true, 320);
 
         // - Panggil method displayInfo()
         mobilSport.displayInfo();
@@ -145,11 +148,12 @@ public class BasicInheritancePractice {
         // mobilSport instanceof Kendaraan: true
         // mobilSport instanceof Object: true
 
+        // ===== AKSES LEVEL DAN INHERITANCE =====
+        System.out.println("\n=== AKSES LEVEL DAN INHERITANCE ===");
+
         // Latihan 7: Akses level dan inheritance
         // - Coba akses property protected (merk, warna, tahunProduksi) dari child class -> BISA
         System.out.println("Protected property (merk): " + mobilSport.merk);
-        System.out.println("Protected property (warna): " + mobilSport.warna);
-        System.out.println("Protected property (tahunProduksi): " + mobilSport.tahunProduksi);
 
         // - Coba akses property private (nomorRangka) langsung dari child class -> TIDAK BISA
         // mobilSport.nomorRangka = "12345"; // ERROR jika dicoba langsung

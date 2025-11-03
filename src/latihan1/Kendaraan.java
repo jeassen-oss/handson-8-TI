@@ -4,7 +4,6 @@ public class Kendaraan {
     protected String merk;
     protected String warna;
     protected int tahunProduksi;
-    private String nomorRangka;
 
     // Constructor
     public Kendaraan(String merk, String warna, int tahunProduksi) {
@@ -13,7 +12,6 @@ public class Kendaraan {
         this.merk = merk;
         this.warna = warna;
         this.tahunProduksi = tahunProduksi;
-        this.nomorRangka = "Belum terdaftar";
 
         // - Print pesan "Constructor Kendaraan dipanggil"
         System.out.println("Constructor Kendaraan dipanggil");
@@ -26,7 +24,6 @@ public class Kendaraan {
         System.out.println("Merk: " + merk);
         System.out.println("Warna: " + warna);
         System.out.println("Tahun Produksi: " + tahunProduksi);
-        System.out.println("Nomor Rangka: " + nomorRangka);
     }
 
     // Method klakson
@@ -40,14 +37,5 @@ public class Kendaraan {
         // TODO: Return umur kendaraan (tahun sekarang - tahun produksi)
         int tahunSekarang = java.time.Year.now().getValue();
         return tahunSekarang - tahunProduksi;
-    }
-
-    // Getter dan Setter
-    public String getNomorRangka() {
-        return nomorRangka;
-    }
-
-    public void setNomorRangka(String nomorRangka) {
-        this.nomorRangka = nomorRangka;
     }
 }
